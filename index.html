@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cyber Security Management System</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <header>
+        <h1>Cyber Security Management System</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('users')">User Management</button>
+        <button onclick="showSection('logs')">Security Logs</button>
+    </nav>
+
+    <main>
+        <section id="dashboard" class="active-section">
+            <h2>Dashboard</h2>
+            <p>Welcome to the Cyber Security Management System Dashboard.</p>
+        </section>
+
+        <section id="users" class="hidden-section">
+            <h2>User Management</h2>
+            <input type="text" id="username" placeholder="Enter username"/>
+            <button onclick="addUser()">Add User</button>
+
+            <h3>Users:</h3>
+            <ul id="userList"></ul>
+        </section>
+
+        <section id="logs" class="hidden-section">
+            <h2>Security Logs</h2>
+            <button onclick="addLog()">Generate Security Log</button>
+            <ul id="logList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
